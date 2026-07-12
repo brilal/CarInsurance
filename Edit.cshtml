@@ -1,0 +1,47 @@
+@model IEnumerable<CarInsurance.Models.Insuree>
+
+@{
+    ViewData["Title"] = "Insurees";
+}
+
+<h1>Insurees</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Car Year</th>
+            <th>Car Make</th>
+            <th>Car Model</th>
+            <th>DUI</th>
+            <th>Speeding Tickets</th>
+            <th>Coverage Type</th>
+            <th>Quote</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.EmailAddress</td>
+                <td>@item.DateOfBirth.ToShortDateString()</td>
+                <td>@item.CarYear</td>
+                <td>@item.CarMake</td>
+                <td>@item.CarModel</td>
+                <td>@item.DUI</td>
+                <td>@item.SpeedingTickets</td>
+                <td>@item.CoverageType</td>
+                <td>$@item.Quote</td>
+            </tr>
+        }
+    </tbody>
+</table>

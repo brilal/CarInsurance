@@ -1,0 +1,77 @@
+@model CarInsurance.Models.Insuree
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Insuree</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EmailAddress"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DateOfBirth"></label>
+                <input asp-for="DateOfBirth" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CarYear"></label>
+                <input asp-for="CarYear" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CarMake"></label>
+                <input asp-for="CarMake" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CarModel"></label>
+                <input asp-for="CarModel" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DUI"></label>
+                <input asp-for="DUI" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SpeedingTickets"></label>
+                <input asp-for="SpeedingTickets" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CoverageType"></label>
+                <input asp-for="CoverageType" class="form-control" />
+            </div>
+
+            <!-- Quote field removed -->
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
